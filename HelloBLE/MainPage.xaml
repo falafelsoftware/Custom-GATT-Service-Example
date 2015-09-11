@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="HelloBLE.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloBLE"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical">
+            <TextBlock FontSize="25 " Margin="-1,30,0,0">Custom GATT Service Example</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Foreground="Blue">Adafruit Bluefruit Connection Status:</TextBlock>
+                <TextBlock x:Name="txtBTLEStatus" FontSize="20" Foreground="Red" Margin="5,0,0,0">Not Initialized</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnBlue" FontSize="20" Background="Blue" Foreground="White" Click="btnColor_Click">Blue</Button>
+                <Button x:Name="btnGreen" FontSize="20" Background="Green" Foreground="White" Click="btnColor_Click">Green</Button>
+                <Button x:Name="btnYellow" FontSize="20" Background="Yellow" Click="btnColor_Click">Yellow</Button>
+                <Button x:Name="btnOrange" FontSize="20" Background="Orange" Click="btnColor_Click">Orange</Button>
+                <Button x:Name="btnPurple" FontSize="20" Background="Purple" Foreground="White" Click="btnColor_Click">Purple</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20">Last Notification indicated Flora LED Hex Color As: </TextBlock>
+                <TextBlock x:Name="txtLastNotificationHex" FontSize="20" Margin="5,0,0,0">N/A</TextBlock>
+            </StackPanel>
+            <TextBlock x:Name="txtProgress" FontSize="20" Foreground="Green"></TextBlock>
+            <TextBlock x:Name="txtInfo" FontSize="20" Foreground="Red"></TextBlock>
+            <Button x:Name="btnRead" Click="btnRead_Click">Read Current Color Through the Read Characteristic</Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20">Current Read Value Is: </TextBlock>
+                <TextBlock x:Name="txtReadValue" FontSize="20" Margin="5,0,0,0">N/A</TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
